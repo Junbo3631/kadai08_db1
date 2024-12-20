@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>あなたのスリーサイズを教えて</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #4caf50;
+      }
+
+      label {
+        display: block;
+        margin: 10px 0 5px;
+        font-size: 1rem;
+        color: #555;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 1rem;
+      }
+
+      .image {
+        margin: 20px 0;
+      }
+
+      button {
+        background-color: #e708a8;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+
+      button:hover {
+        background-color: #b10e9e;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .container {
+          padding: 15px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        button {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>あなたのスリーサイズを教えて</h2>
+      <div class="image">
+        <img src="saru.jpg" alt="測定のイメージ" />
+      </div>
+      <form action="confirm.php" method="post">
+        <label for="name">名前:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="bust">バスト (cm):</label>
+        <input type="number" id="bust" name="bust" required />
+
+        <label for="waist">ウエスト (cm):</label>
+        <input type="number" id="waist" name="waist" required />
+
+        <label for="hip">ヒップ (cm):</label>
+        <input type="number" id="hip" name="hip" required />
+
+        <button type="submit">回答する</button>
+      </form>
+    </div>
+  </body>
+</html>
